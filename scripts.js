@@ -8,7 +8,7 @@ form.addEventListener('submit', function(e) {
 
 
 var typed = new typed(".tex",{
-    strings:["Frontend Developer" , "Editor" ,"Web Developer"],
+    strings:["Frontend Developer" , "Video Editor" ,"Web Developer"],
     typeSpeed:100,
     backSpeed:100,
     backDelay:1000,
