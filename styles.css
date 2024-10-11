@@ -1,0 +1,324 @@
+
+
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #080808;
+    color: #fff;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    padding-left: 500px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 20px;
+}
+.logo{
+    width: 140px;
+    padding-left: 70px;
+    margin-top: 20px;
+}
+
+.navbar ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    
+}
+
+.navbar ul li a {
+   color: #fff;
+   text-decoration: none;
+   font-size: 18px;
+   position: relative;
+}
+.navbar ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #eeff00e7;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+
+}
+
+/* Hero Section */
+
+.containe {
+    display: flex; /* Use Flexbox */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between text and image */
+    margin-top: 100px; /* Maintain the existing top margin */
+    font-size: 30px;
+    margin-left: 90px; /* Adjust as needed */
+}
+
+.image-content {
+    flex: 1; /* Allow image to take up space */
+    text-align: right; /* Align the image to the right */
+}
+
+.profile-image {
+    width: 70%; /* Set the width to a percentage or a fixed size (e.g., 200px) */
+    max-width: 450px; /* Ensure it doesn’t exceed a certain width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Optional: adds rounded corners */
+    margin-right: 90px;
+    cursor: pointer;
+    box-shadow: white;
+}
+
+
+.containe p{
+    font-size: 20px;
+    margin-top: 10px;
+}
+.containe h1{
+    font-size: 40px;
+    margin-top: 5px;
+}
+.cta-button {
+    background-color: #eeff00e7;
+    padding: 8px 20px; /* Decrease padding */
+    margin-top: 20px;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 16px; /* Decrease font size */
+}
+
+.cta-button:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+}
+
+
+
+/* About Section */
+/* About Section */
+/* About Section */
+.about-section {
+    padding: 250px 20px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; /* Space between image and text */
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 300px; /* Adjust this value for the image size */
+    margin: 20px auto;
+    border-radius: 15px; /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for effect */
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+
+
+/* Projects Section */
+.projects-section {
+    padding: 100px 20px;
+}
+
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+.card{
+    background-color: #fff;
+    border-radius: 10px;
+    height: 500px;
+}
+
+.project-card {
+    background-color: rgb(86, 86, 86);
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-right: 20px;
+
+}
+
+.project-image {
+    width: 100%; /* Set the image to take full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    
+}.project-card img{
+  width: 400px;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+.cards{
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+
+/* Skills Section */
+.skills-section {
+    padding: 100px 20px;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-list li {
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.skills-list li:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    border: 2px solid #bdc3c7;
+    border-radius: 5px;
+}
+
+button {
+    padding: 12px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+/* Footer */
+footer {
+    background-color: #292929;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .project-gallery {
+        flex-direction: column;
+    }
+
+    .skills-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-button {
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar ul {
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    .project-gallery {
+        gap: 15px;
+    }
+
+    .skills-list li {
+        width: 100%;
+    }
+
+    form {
+        width: 90%;
+    }
+}

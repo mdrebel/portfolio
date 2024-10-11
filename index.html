@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <img src="img/output-onlinepngtools.png" class="logo">
+            <div class="container">
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="containe">
+            <div class="text-content">
+                <p>Frontend Designer</p>
+                <h1>Hi, I'm<span> Md Yusuf</span><br>From India</h1>
+                <h3>And I'm a <span class="tex"></span></h3>
+                <a href="#projects" class="cta-button">View My Work</a>
+            </div>
+            <div class="image-content">
+                <img src="img/Designer (1).jpeg" alt="Your photo" class="profile-image">
+            </div>
+        </div>
+        
+        <!-- About Section -->
+        <section id="about" class="about-section container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="img/sameer.jpg" alt="Your photo" class="profile-pic">
+                </div>
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>
+                        I'm a Prefinal-year student at Dhanekula institute of engineering and Technologie, passionate about developing new ideas. 
+                        I have experience in Frontend Technology,Backend,UI/UX Design,video Editing. My goal is to leverage my skills to create 
+                        impactful solutions in [Your Field]. In my free time, I enjoy [Your Hobbies].
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section container">
+            <h2>Projects</h2>
+            <div class="project-gallery">
+                <div class="card">
+                <div class="project-card">
+                    <img src="img/vocalss.png" alt="Project 1 image">
+                    <h3>Project 1</h3>
+                    <p>A brief description of Project 1.</p>
+                    <a href="index01.html" class="project-link">View Project</a>
+                </div>
+                </div>
+                <div class="card">
+                <div class="project-card">
+                    <img src="" alt="Project 2 image">
+                    <h3>Project 2</h3>
+                    <p>A brief description of Project 2.</p>
+                    <a href="index02.html" class="project-link">View Project</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section container">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>React.js</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section container">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Md Yusuf | Designed with ❤️</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var typed = new Typed(".tex", {
+                strings: ["Frontend Developer", "Editor", "Web Developer"],
+                typeSpeed: 100,
+                backSpeed: 100,
+                backDelay: 1000,
+                loop: true
+            });
+        });
+    </script>
+</body>
+</html>     
