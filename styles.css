@@ -136,11 +136,13 @@ body {
 }
 
 .about-image img {
-    width: 100%;
-    max-width: 300px; /* Adjust this value for the image size */
-    margin: 20px auto;
-    border-radius: 15px; /* Adds rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for effect */
+    width: 70%; /* Set the width to a percentage or a fixed size (e.g., 200px) */
+    max-width: 450px; /* Ensure it doesn’t exceed a certain width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Optional: adds rounded corners */
+    margin-right: 90px;
+    cursor: pointer;
+    box-shadow: white;/* Optional: adds a subtle shadow for effect */
 }
 
 .about-text {
