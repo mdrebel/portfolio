@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,700&family=Roboto+Slab&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-text-color:#183b56;
+    --secondary-text-color:#577592;
+    --accent-color:#2294eb;
+    --accent-color-dark:#1d69a3;
+    --padding-inline-section: 20px;
+}
+body{
+    font-family: 'Poppins',sans-serif;
+    color: var(--primary-text-color);
+    
+}
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.5rem;
+}
+p{
+    font-family: 'Roboto',sans-serif;
+    font-size: 1.25rem;
+    color: var(--secondary-text-color);
+    line-height: 1.8rem;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+ul{
+    list-style: none;
+}
+.top-text{
+font-size: 2rem;
+font-weight: 700;
+font-family: 'Gilroy';
+}
+.container{
+    max-width: 1180px;
+    margin-inline:auto;
+    padding-inline: var(--padding-inline-section);
+    
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.hover-links{
+    color: var(--primary-text-color);
+}
+.hover-links:hover{
+    color: var(--accent-color);
+}
+.primary-button{
+    background-color: var(--accent-color);
+    border-radius: 6px;
+    font-weight: 700;
+    color: white !important;
+    padding: 12px 24px;
+    box-shadow: 0 0 2px var(--secondary-text-color);
+    transition: 0.2s ease-out;
+}
+.primary-button:hover{
+     background-color: var(--accent-color-dark);
+}
+.secondary-button{
+    border: 0.5px solid var(--secondary-text-color);
+    border-radius: 6px;
+    font-weight: 700;
+    color: var(--primary-text-color) !important;
+    padding: 12px 24px;
+    transition: 0.2s ease-out;
+}
+.secondary-button:hover{
+    border-color: var(--accent-color);
+    color: var(--accent-color) !important;
+}
+/* top part */
+.top-banner{
+    background-image: url(/images/U\ design.png);
+    background-color: #4fb3d4;
+    background-size: 200px ;
+    height: 42px;
+    filter: blur(0.5px);
+
+}  
+.banner-text{
+    
+    padding: 15px 30px;
+    text-align: center;
+}
+.top-text img{
+    width: 100px;
+}
+
+.main-nav{
+    justify-content: space-between;
+}
+.company-logo img{
+    width: 100px;
+}
+.nav-links{
+    flex-basis: 730px;
+    transform: 0.2s ease-out;
+
+}
+.nav-links ul{
+    justify-content: end;
+    gap: 40px;
+}
+header{
+    padding: 50px var(--padding-inline-section) 0;
+}
+.header-section{
+    justify-content: center;
+    gap: 40px;
+}
+.header-left{
+    max-width: 40vw;
+}
+.header-left h1{
+    margin-top: 20px;
+}
+.header-right img{
+    width: 600px;
+    border-radius: 50%;
+}
+.header-right img:hover{
+    box-shadow: 0 0 10px 1px var(--accent-color);
+}
+.Get-started{
+    margin-top: 20px;
+}
+
+.popup{
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%,-50%) scale(1.25);
+    width: 380px;
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 2px 2px 5px 5px rgb(0,0,0,0.15);
+    border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms,
+                opacity  200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+}
+.popup.active{
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+     transition:top 0ms ease-in-out 0ms,
+                opacity  200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms,
+}
+
+
+.popup .close-btn{
+    position: absolute;
+    top: 17px;
+    padding-right: 60px;
+    right: ;
+    width: 15px;
+    height: 15px;
+    background: ;
+    color: black;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+   
+}
+
+.popup .form h2{
+    text-align: center;
+    color: #222;
+    margin: 10px 0 20px;
+    font-size: 25px;
+}
+.popup .form .form-elements{
+    margin: 15px 0px;
+}
+.popup .form .form-elements label{
+    font-size: 14px;
+    color: #222;
+}
+.popup .form .form-elements input[type="text"],
+.popup .form .form-elements input[type="password"]{
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+.popup .form .form-elements input[type="checkbox"]{
+    margin-right: 5px;
+}
+.popup .form .form-elements button{
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #222;
+    color: #f5f5f5;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.popup .form .form-elements a{
+    display: block;
+    text-align: right;
+    font-size: 15px;
+    color: #1a79ca;
+    text-decoration: none;
+    font-weight: 500;
+}
+/*big-feature-section*/
+.big-feature-section{
+    padding: 30px var(--padding-inline-section) 0;
+}
+.big-feature-container{
+    gap: 30px;
+}
+.feature-img img{
+    width: 450px;
+    border-radius: 50%;
+}
+.feature-imgs img{
+    width: 500px;
+    border-radius: 50%;
+}
+.feature-imgs img:hover{
+    box-shadow: 0 0 10px 1px var(--accent-color);
+}
+.feature-img img:hover{
+    box-shadow: 0 0 10px 1px var(--accent-color);
+}
+.feature-desc{
+    flex-direction: column;
+    align-items: flex-start;
+}
+    /* songs-header*/
+
+    .songs-header{
+        text-align: center;
+        margin-block: 30px;
+        color: var(--primary-text-color);
+    }
+    .songs01{
+        width: 50%;
+        height: 200px;
+        display: flex;
+        gap: 5px;
+    }
+    .songs01 img{
+        width: 10%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 2px solid white;
+        transition: all ease-out 0.5s;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+    .songs01 img:hover{
+        width: 100%;
+        height: 160%;
+    }
+    h2{
+        color: black;
+    }
+    .container02 {
+        max-width: 1180px;
+        margin-inline:auto;
+        padding-inline: var(--padding-inline-section);
+        padding:  7px  7px;
+    }
+    .songs02{
+        width: 50%;
+        height: 200px;
+        display: flex;
+        gap: 5px;
+    }
+    .songs02 img{
+        width: 10%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 2px solid white;
+        transition: all ease-out 0.5s;
+        cursor: pointer;
+        margin-top: 40px;
+    }
+    .songs02 img:hover{
+        width: 200%;
+        height: 180%;
+    }
+    h2{
+        color: black; 
+    }
+    .he{
+        margin-top: 100px;
+    }
+    /* hover*/
