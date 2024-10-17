@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #080808;
+    background-color: #000336;
     color: #fff;
 }
 
@@ -28,8 +28,8 @@ body {
     padding-left: 20px;
 }
 .logo{
-    width: 140px;
-    padding-left: 70px;
+    width: 110px;
+    padding-left: 35px;
     margin-top: 20px;
 }
 
@@ -50,7 +50,7 @@ body {
     content: '';
     width: 0;
     height: 3px;
-    background: #eeff00e7;
+    background: #9090DC;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -68,24 +68,26 @@ body {
     display: flex; /* Use Flexbox */
     align-items: center; /* Center items vertically */
     justify-content: space-between; /* Space between text and image */
-    margin-top: 100px; /* Maintain the existing top margin */
+    margin-top:50px; /* Maintain the existing top margin */
     font-size: 30px;
-    margin-left: 90px; /* Adjust as needed */
+    margin-left: 65px; /* Adjust as needed */
 }
 
 .image-content {
     flex: 1; /* Allow image to take up space */
     text-align: right; /* Align the image to the right */
+    
 }
 
 .profile-image {
-    width: 70%; /* Set the width to a percentage or a fixed size (e.g., 200px) */
-    max-width: 450px; /* Ensure it doesn’t exceed a certain width */
+    width: 100%; /* Set the width to a percentage or a fixed size (e.g., 200px) */
+    max-width: 495px; /* Ensure it doesn’t exceed a certain width */
     height: auto; /* Maintain aspect ratio */
     border-radius: 50%; /* Optional: adds rounded corners */
-    margin-right: 90px;
+    margin-right: 40px;
     cursor: pointer;
     box-shadow: white;
+    
 }
 
 
@@ -98,19 +100,23 @@ body {
     margin-top: 5px;
 }
 .cta-button {
-    background-color: #eeff00e7;
-    padding: 8px 20px; /* Decrease padding */
-    margin-top: 20px;
+    background-color: #8D8DDA;
+    padding: 15px 26px; /* Decrease padding */
+    margin-top: 30px;
     color: black;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 100px;
     transition: background-color 0.3s ease, transform 0.2s ease;
     font-size: 16px; /* Decrease font size */
 }
 
 .cta-button:hover {
-    background-color: #e67e22;
+    background-color: #D9D5D0;
     transform: scale(1.05);
+}
+
+.tex{
+    color: #8D8DDA;
 }
 
 
@@ -119,7 +125,7 @@ body {
 /* About Section */
 /* About Section */
 .about-section {
-    padding: 250px 20px;
+    padding: 135px 20px;
 }
 
 .about-content {
@@ -137,7 +143,7 @@ body {
 
 .about-image img {
     width: 100%;
-    max-width: 300px; /* Adjust this value for the image size */
+    max-width: 400px; /* Adjust this value for the image size */
     margin: 20px auto;
     border-radius: 15px; /* Adds rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for effect */
@@ -161,52 +167,88 @@ body {
 
 /* Projects Section */
 .projects-section {
-    padding: 100px 20px;
+    padding: 60px 10px;
+    align-items: center;
+    justify-content: center;
+    display: inline;
+   
+}
+.projects-section h2{
+    padding-left: 20px;
 }
 
 .project-gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 20px;
+    gap: 10px;
 }
-.card{
-    background-color: #fff;
-    border-radius: 10px;
-    height: 500px;
-}
-
-.project-card {
-    background-color: rgb(86, 86, 86);
-    padding: 20px;
-    border-radius: 10px;
-    width: 400px;
+.card01{
+    background-image: linear-gradient(to top right,#AAD9D9,#4548A7);
+    border-radius: 30px;
+    height: 420px;
+    width: 530px;
     text-align: center;
+    justify-content: center;
+    align-items: center;
     transition: transform 0.3s ease-in-out;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
-    margin-left: 20px;
-    margin-top: 30px;
-    margin-right: 20px;
-
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.card01 h3{
+    text-align: center;
+    color: black;
+    padding: 30px 20px;
+    align-items: center;
 }
 
-.project-image {
-    width: 100%; /* Set the image to take full width of the card */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Optional: Adds rounded corners */
-    
-}.project-card img{
+.card01 img{
   width: 400px;
+  margin-left: 20px;
+  margin-top: 55px;
+  margin-right: 20px;
 }
 
-.project-card:hover {
+.card01:hover {
     transform: translateY(-5px);
 }
-.cards{
-    background-color: #fff;
-    border-radius: 10px;
+
+.project-link{
+    text-decoration: none;
+    border-radius: 100px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    padding: 15px 26px; /* Decrease padding */
+    margin-top: 30px;
 }
 
+.card02{
+    background-image: linear-gradient(to top right,#AAD9D9,#4548A7);
+    border-radius: 30px;
+    height: 420px;
+    width: 530px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.card02 h3{
+    text-align: center;
+    color: black;
+    padding: 30px 20px;
+    align-items: center;
+}
+.card02 img{
+    width: 480px;
+    margin-left: 20px;
+    margin-top: 55px;
+    margin-right: 20px;
+  }
+  .card02:hover {
+    transform: translateY(-5px);
+}
 
 /* Skills Section */
 .skills-section {
@@ -214,19 +256,21 @@ body {
 }
 
 .skills-list {
-    display: flex;
+align-items: center;
+display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 21px;
     list-style-type: none;
     padding: 0;
 }
 
 .skills-list li {
-    background-color: #2ecc71;
+    background-image: linear-gradient(to top right,#AAD9D9,#4548A7);
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 10px 50px;
+    
+    border-radius: 20px;
     transition: transform 0.2s ease-in-out;
 }
 
@@ -258,24 +302,26 @@ input, textarea {
 
 button {
     padding: 12px;
-    background-color: #e74c3c;
-    color: white;
-    border: none;
+    width: 422px;
+    background-color: #8D8DDA;
+    color: black;
+    border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #c0392b;
+    background-color: #fff;
 }
 
 /* Footer */
 footer {
-    background-color: #292929;
+    background-color: #131350;
     color: white;
     padding: 20px;
     text-align: center;
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
