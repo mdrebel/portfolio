@@ -1,32 +1,20 @@
 // Interactive Form Validation
 const form = document.getElementById('contact-form');
 
-form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Message Sent! I will contact you soon.');
-});
-
-
-var typed = new typed(".tex",{
-    strings:["Frontend Developer" , "Video Editor" ,"Web Developer"],
-    typeSpeed:100,
-    backSpeed:100,
-    backDelay:1000,
-    loop:true
-})
+// Initialize Typed.js for typing effect
 document.addEventListener("DOMContentLoaded", function () {
-    var typed = new Typed(".tex", {
+    new Typed(".tex", {
         strings: ["Frontend Developer", "Video Editor", "Web Developer"],
         typeSpeed: 100,
         backSpeed: 100,
         backDelay: 1000,
-    
         loop: true
     });
 });
 
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent the form from submitting normally
+// Form submission handling
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
 
     const formData = {
         name: document.querySelector('input[name="name"]').value,
@@ -34,9 +22,11 @@ document.getElementById("contact-form").addEventListener("submit", function(even
         message: document.querySelector('textarea[name="message"]').value
     };
 
-    fetch('contact.php', {
+    // Use Formspree or another service if you're on GitHub Pages
+    fetch('https://formspree.io/f/mgvevzdr', {
         method: 'POST',
         headers: {
+            'Accept': 'application/json', // Expect JSON response
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(formData)
@@ -51,11 +41,13 @@ document.getElementById("contact-form").addEventListener("submit", function(even
         console.log('Success:', data);
         if (data.success) {
             alert(`Thank you, ${data.name}! Your message has been sent.`);
+            form.reset(); // Optionally reset the form after submission
         } else {
             alert(`Error: ${data.error}`);
         }
     })
     .catch(error => {
         console.error('Error:', error);
+        alert('There was a problem with your submission. Please try again.');
     });
 });

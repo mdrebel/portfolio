@@ -115,51 +115,61 @@
 
     <!-- JavaScript -->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var typed = new Typed(".tex", {
-                strings: ["Frontend Developer", "Video Editor", "Web Developer"],
-                typeSpeed: 100,
-                backSpeed: 100,
-                backDelay: 1000,
-            
-                loop: true
-            });
-        });
+       // Interactive Form Validation
+const form = document.getElementById('contact-form');
 
-        document.getElementById("contact-form").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent the form from submitting normally
-        
-            const formData = {
-                name: document.querySelector('input[name="name"]').value,
-                email: document.querySelector('input[name="email"]').value,
-                message: document.querySelector('textarea[name="message"]').value
-            };
-        
-            fetch('contact.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok ' + response.statusText);
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log('Success:', data);
-                if (data.success) {
-                    alert(`Thank you, ${data.name}! Your message has been sent.`);
-                } else {
-                    alert(`Error: ${data.error}`);
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-        });
+// Initialize Typed.js for typing effect
+document.addEventListener("DOMContentLoaded", function () {
+    new Typed(".tex", {
+        strings: ["Frontend Developer", "Video Editor", "Web Developer"],
+        typeSpeed: 100,
+        backSpeed: 100,
+        backDelay: 1000,
+        loop: true
+    });
+});
+
+// Form submission handling
+// Form submission handling
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    const formData = {
+        name: document.querySelector('input[name="name"]').value,
+        email: document.querySelector('input[name="email"]').value,
+        message: document.querySelector('textarea[name="message"]').value
+    };
+
+    // Use Formspree for handling the form submission
+    fetch('https://formspree.io/f/mgvevzdr', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json', // Expect JSON response
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Response from Formspree:', data); // Log the full response
+        if(data.success) {
+            alert(`Thank you, ${data.name}! Your message has been sent.`);
+            form.reset(); // Reset the form after successful submission
+        } else {
+            alert(`Thank you, ${data.error || '! Your message has been sent.'}`);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('There was a problem with your submission. Please try again. Error: ' + error.message);
+    });
+});
+
                 
                 
     </script>
