@@ -368,3 +368,7 @@ footer {
         width: 90%;
     }
 }
+.form-message {
+    margin-top: 15px;
+    font-size: 1rem;
+}
