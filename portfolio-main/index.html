@@ -91,19 +91,28 @@
 
         <!-- Contact Section -->
         <!-- Contact Section -->
-<section id="contact" class="contact-section container">
-    <h2>Contact Me</h2>
-    <form id="contact-form" action="https://formspree.io/f/mgvevzdr" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-    
-    
-    <div id="form-message" class="form-message"></div>
-</section>
-
+        <section id="contact" class="contact-section container">
+            <h2>Contact Me</h2>
+            <form id="contact-form" action="https://formspree.io/f/mgvevzdr" method="POST">
+                <div class="floating-label-group">
+                    <input type="text" id="name" class="floating-input" name="name" required>
+                    <label for="name" class="floating-label">Your Name</label>
+                </div>
+                <div class="floating-label-group">
+                    <input type="email" id="email" class="floating-input" name="email" required>
+                    <label for="email" class="floating-label">Your Email</label>
+                </div>
+                <div class="floating-label-group">
+                    <textarea id="message" class="floating-input" name="message" required></textarea>
+                    <label for="message" class="floating-label">Your Message</label>
+                </div>
+                <div class="btn">
+                <button type="submit">Send Message</button>
+                </div>
+            </form>
+            <div id="form-message" class="form-message"></div>
+        </section>
+        
     </main>
 
     <!-- Footer -->
@@ -115,11 +124,28 @@
 
     <!-- JavaScript -->
     <script>
+
+
+
+        
        // Interactive Form Validation
 const form = document.getElementById('contact-form');
 
 // Initialize Typed.js for typing effect
 document.addEventListener("DOMContentLoaded", function () {
+    const messageField = document.querySelector('#message');
+    const messageLabel = document.querySelector('label[for="message"]');
+
+    // Event listener to hide the label when typing starts
+    messageField.addEventListener('input', function() {
+        if (messageField.value.length > 0) {
+            messageLabel.style.display = 'none'; // Hide the label when there's text
+        } else {
+            messageLabel.style.display = 'block'; // Show the label if the field is empty
+        }
+    });
+
+    // Initialize Typed.js for typing effect (leave this unchanged)
     new Typed(".tex", {
         strings: ["Frontend Developer", "Video Editor", "Web Developer"],
         typeSpeed: 100,
@@ -128,6 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
         loop: true
     });
 });
+
 
 // Form submission handling
 // Form submission handling

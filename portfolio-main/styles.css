@@ -299,16 +299,98 @@ input, textarea {
     border: 2px solid #bdc3c7;
     border-radius: 5px;
 }
+.floating-label-group {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%; /* Ensures full width responsiveness */
+    background-color: #000336;
+    
+}
+
+.floating-input {
+    width: 100%;
+    padding: 15px 12px 5px; /* Adjusted padding for label spacing */
+    font-size: 16px;
+    border: 1.5px solid #f0ffff;
+    border-radius: 5px;
+    outline: none;
+    background: transparent;
+    resize: none; /* For textarea */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    color: #fff;
+    transition: 0.1s ease;
+    z-index: 1111;
+}
+
+textarea.floating-input {
+    height: 120px; /* Adjust height for message field */
+    color: #ffffff;
+}
+
+.floating-label {
+    position: absolute;
+    top: 7px; /* Adjusted top to fit input padding */
+    left: -10px;
+    padding: 0 15px;
+    margin: 0 33px;
+    background-color: #000336;
+    transition: 0.2s ease;
+    font-size: 1.0em;
+    
+    
+}
+input:focus,
+input:valid{
+    color: #fff;
+    border: 2px solid #9090DC;
+    line-height: 30px;
+}
+input:focus + .floating-label,
+input:valid + .floating-label{
+    color: #9090DC;
+    height: 30px;
+    line-height: 30px;
+    transform: translate(-10px,-21px) scale(0.88);
+    z-index: 1111;
+}
+
+
+
+
+
+
+
+
+
+
+/* Ensure proper margin for mobile screens */
+@media (max-width: 768px) {
+    .floating-label-group {
+        margin-bottom: 15px;
+    }
+
+    .floating-input {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .floating-label {
+        font-size: 14px;
+    }
+}
+
+
 
 button {
     padding: 12px;
-    width: 422px;
-    background-color: #8D8DDA;
+    width: 404px;
+    background-image: linear-gradient(to top right, #AAD9D9, #4548A7);;
     color: black;
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 
 button:hover {
     background-color: #fff;
@@ -324,7 +406,7 @@ footer {
 
 
 /* Responsive Design */
-@media screen and (max-width: 600px) {
+@media (max-width: 768px) {
     .navbar ul {
         flex-direction: column;
     }
@@ -367,4 +449,8 @@ footer {
     form {
         width: 90%;
     }
+}
+.form-message {
+    margin-top: 15px;
+    font-size: 1rem;
 }
